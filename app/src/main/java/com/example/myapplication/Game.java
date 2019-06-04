@@ -22,7 +22,6 @@ public class Game extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         ImageView next = findViewById(R.id.bt_next);
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +55,9 @@ public class Game extends AppCompatActivity {
 
         if (check) {
             tv.setText(current.getText());
-            ListSingleton.getInstance().getTextPassed().add(current);
+            ArrayList<myObject> textPassed = ListSingleton.getInstance().getTextPassed();
+            textPassed.add(current);
+            ListSingleton.getInstance().setTextPassed(textPassed);
         } else {
             makeRound();
         }

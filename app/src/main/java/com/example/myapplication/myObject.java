@@ -10,6 +10,8 @@ public class myObject {
         this.text = text;
     }
 
+    public myObject() {}
+
     public int getId() {
         return id;
     }
