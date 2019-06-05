@@ -37,7 +37,7 @@ public class Game extends AppCompatActivity {
         randomNum = 1 + (int) (Math.random() * ((totalString - 1) + 1));
         return randomNum;
     }
-    //TEST
+    //TEST Again
 
     public boolean checkPassed() {
         ArrayList<myObject> textPassed = ListSingleton.getInstance().getTextPassed();
