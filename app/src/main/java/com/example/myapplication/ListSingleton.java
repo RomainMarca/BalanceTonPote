@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.content.res.Resources;
-
 import java.util.ArrayList;
 
 class ListSingleton {

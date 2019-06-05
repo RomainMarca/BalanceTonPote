@@ -40,10 +40,17 @@ public class Game extends AppCompatActivity {
 
     public boolean checkPassed() {
         ArrayList<myObject> textPassed = ListSingleton.getInstance().getTextPassed();
-        for (int i = 0; i < textPassed.size(); i++) {
-            if (current.getId() != textPassed.get(i).getId()) {
-                return true;
+        ArrayList<myObject> text = ListSingleton.getInstance().getText();
+        if (textPassed.size() < text.size()) {
+            for (int i = 0; i < textPassed.size(); i++) {
+                if (current.getId() != textPassed.get(i).getId()) {
+                    return true;
+                }
             }
+        } else {
+            textPassed.clear();
+            ListSingleton.getInstance().setTextPassed(textPassed);
+            makeRound();
         }
         return false;
     }
